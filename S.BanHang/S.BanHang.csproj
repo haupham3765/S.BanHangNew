@@ -1,0 +1,611 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A328F5E8-5866-41CD-BC25-72C53F1A5641}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>S.BanHang</RootNamespace>
+    <AssemblyName>S.BanHang</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Syncfusion.Compression.Base, Version=20.3460.0.61, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Compression.Base.20.3.0.61\lib\net46\Syncfusion.Compression.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing, Version=20.3460.0.61, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Licensing.20.3.0.61\lib\net46\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.XlsIO.Base, Version=20.3460.0.61, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.XlsIO.WinForms.20.3.0.61\lib\net46\Syncfusion.XlsIO.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frbcdps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frbcdps.Designer.cs">
+      <DependentUpon>frbcdps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frdashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frdashboard.Designer.cs">
+      <DependentUpon>frdashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frdmtaikhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frdmtaikhoan.Designer.cs">
+      <DependentUpon>frdmtaikhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frdoimatkhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frdoimatkhau.Designer.cs">
+      <DependentUpon>frdoimatkhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frhoadon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frhoadon.Designer.cs">
+      <DependentUpon>frhoadon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frhopdong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frhopdong.Designer.cs">
+      <DependentUpon>frhopdong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frgiaybaogia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frgiaybaogia.Designer.cs">
+      <DependentUpon>frgiaybaogia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frhanghoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frhanghoa.Designer.cs">
+      <DependentUpon>frhanghoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frkhachhang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frkhachhang.Designer.cs">
+      <DependentUpon>frkhachhang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmain.Designer.cs">
+      <DependentUpon>frmain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frlogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frlogin.Designer.cs">
+      <DependentUpon>frlogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frsuaDMTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frsuaDMTK.Designer.cs">
+      <DependentUpon>frsuaDMTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frsuagiayBG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frsuagiayBG.Designer.cs">
+      <DependentUpon>frsuagiayBG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrsuaHH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrsuaHH.Designer.cs">
+      <DependentUpon>FrsuaHH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frthemDMTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frthemDMTK.Designer.cs">
+      <DependentUpon>frthemDMTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frthemgiaybaogia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frthemgiaybaogia.Designer.cs">
+      <DependentUpon>frthemgiaybaogia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frthemHH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frthemHH.Designer.cs">
+      <DependentUpon>frthemHH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fruser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fruser.Designer.cs">
+      <DependentUpon>fruser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frXEMgiaybg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frXEMgiaybg.Designer.cs">
+      <DependentUpon>frXEMgiaybg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TEST.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TEST.Designer.cs">
+      <DependentUpon>TEST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_S_BaoGiaDataSetBCPS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_S_BaoGiaDataSetBCPS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_S_BaoGiaDataSetBG.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_S_BaoGiaDataSetBG.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_S_BaoGiaDataSetBGHopDong.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_S_BaoGiaDataSetBGHopDong.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_S_BaoGiaDataSetBGtemp.cs">
+      <DependentUpon>_S_BaoGiaDataSetBGtemp.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_S_BaoGiaDataSetBGtemp.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_S_BaoGiaDataSetBGtemp.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_S_BaoGiaDataSetChart.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_S_BaoGiaDataSetChart.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_S_BaoGiaDataSetCK.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_S_BaoGiaDataSetCK.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_S_BaoGiaDataSetCTBG.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_S_BaoGiaDataSetCTBG.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_S_BaoGiaDataSetDMTK.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_S_BaoGiaDataSetDMTK.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_S_BaoGiaDataSetDVT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_S_BaoGiaDataSetDVT.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_S_BaoGiaDataSetHH.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_S_BaoGiaDataSetHH.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_S_BaoGiaDataSetKH.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_S_BaoGiaDataSetKH.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_S_BaoGiaDataSetKHO.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_S_BaoGiaDataSetKHO.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_S_BaoGiaDataSetKHOthem.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_S_BaoGiaDataSetKHOthem.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_S_BaoGiaDataSetNV.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_S_BaoGiaDataSetNV.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_S_BaoGiaDataSetSDDK.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_S_BaoGiaDataSetSDDK.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_S_BaoGiaDataSetSuaBG.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_S_BaoGiaDataSetSuaBG.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_S_BaoGiaDataSetSuactBG.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_S_BaoGiaDataSetSuactBG.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_S_BaoGiaDataSetSuaMH.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_S_BaoGiaDataSetSuaMH.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_S_BaoGiaDataSetThem.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_S_BaoGiaDataSetThem.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_S_BaoGiaDataSetXEMbg.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_S_BaoGiaDataSetXEMbg.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frbcdps.resx">
+      <DependentUpon>frbcdps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frdashboard.resx">
+      <DependentUpon>frdashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frdmtaikhoan.resx">
+      <DependentUpon>frdmtaikhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frdoimatkhau.resx">
+      <DependentUpon>frdoimatkhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frgiaybaogia.resx">
+      <DependentUpon>frgiaybaogia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frhanghoa.resx">
+      <DependentUpon>frhanghoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frhoadon.resx">
+      <DependentUpon>frhoadon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frhopdong.resx">
+      <DependentUpon>frhopdong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frkhachhang.resx">
+      <DependentUpon>frkhachhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frlogin.resx">
+      <DependentUpon>frlogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmain.resx">
+      <DependentUpon>frmain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frsuaDMTK.resx">
+      <DependentUpon>frsuaDMTK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frsuagiayBG.resx">
+      <DependentUpon>frsuagiayBG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrsuaHH.resx">
+      <DependentUpon>FrsuaHH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frthemDMTK.resx">
+      <DependentUpon>frthemDMTK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frthemgiaybaogia.resx">
+      <DependentUpon>frthemgiaybaogia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frthemHH.resx">
+      <DependentUpon>frthemHH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fruser.resx">
+      <DependentUpon>fruser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frXEMgiaybg.resx">
+      <DependentUpon>frXEMgiaybg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="TEST.resx">
+      <DependentUpon>TEST.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="_S_BaoGiaDataSetBCPS.xsc">
+      <DependentUpon>_S_BaoGiaDataSetBCPS.xsd</DependentUpon>
+    </None>
+    <None Include="_S_BaoGiaDataSetBCPS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_S_BaoGiaDataSetBCPS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_S_BaoGiaDataSetBCPS.xss">
+      <DependentUpon>_S_BaoGiaDataSetBCPS.xsd</DependentUpon>
+    </None>
+    <None Include="_S_BaoGiaDataSetBG.xsc">
+      <DependentUpon>_S_BaoGiaDataSetBG.xsd</DependentUpon>
+    </None>
+    <None Include="_S_BaoGiaDataSetBG.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_S_BaoGiaDataSetBG.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_S_BaoGiaDataSetBG.xss">
+      <DependentUpon>_S_BaoGiaDataSetBG.xsd</DependentUpon>
+    </None>
+    <None Include="_S_BaoGiaDataSetBGHopDong.xsc">
+      <DependentUpon>_S_BaoGiaDataSetBGHopDong.xsd</DependentUpon>
+    </None>
+    <None Include="_S_BaoGiaDataSetBGHopDong.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_S_BaoGiaDataSetBGHopDong.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_S_BaoGiaDataSetBGHopDong.xss">
+      <DependentUpon>_S_BaoGiaDataSetBGHopDong.xsd</DependentUpon>
+    </None>
+    <None Include="_S_BaoGiaDataSetBGtemp.xsc">
+      <DependentUpon>_S_BaoGiaDataSetBGtemp.xsd</DependentUpon>
+    </None>
+    <None Include="_S_BaoGiaDataSetBGtemp.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_S_BaoGiaDataSetBGtemp.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_S_BaoGiaDataSetBGtemp.xss">
+      <DependentUpon>_S_BaoGiaDataSetBGtemp.xsd</DependentUpon>
+    </None>
+    <None Include="_S_BaoGiaDataSetChart.xsc">
+      <DependentUpon>_S_BaoGiaDataSetChart.xsd</DependentUpon>
+    </None>
+    <None Include="_S_BaoGiaDataSetChart.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_S_BaoGiaDataSetChart.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_S_BaoGiaDataSetChart.xss">
+      <DependentUpon>_S_BaoGiaDataSetChart.xsd</DependentUpon>
+    </None>
+    <None Include="_S_BaoGiaDataSetCK.xsc">
+      <DependentUpon>_S_BaoGiaDataSetCK.xsd</DependentUpon>
+    </None>
+    <None Include="_S_BaoGiaDataSetCK.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_S_BaoGiaDataSetCK.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_S_BaoGiaDataSetCK.xss">
+      <DependentUpon>_S_BaoGiaDataSetCK.xsd</DependentUpon>
+    </None>
+    <None Include="_S_BaoGiaDataSetCTBG.xsc">
+      <DependentUpon>_S_BaoGiaDataSetCTBG.xsd</DependentUpon>
+    </None>
+    <None Include="_S_BaoGiaDataSetCTBG.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_S_BaoGiaDataSetCTBG.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_S_BaoGiaDataSetCTBG.xss">
+      <DependentUpon>_S_BaoGiaDataSetCTBG.xsd</DependentUpon>
+    </None>
+    <None Include="_S_BaoGiaDataSetDMTK.xsc">
+      <DependentUpon>_S_BaoGiaDataSetDMTK.xsd</DependentUpon>
+    </None>
+    <None Include="_S_BaoGiaDataSetDMTK.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_S_BaoGiaDataSetDMTK.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_S_BaoGiaDataSetDMTK.xss">
+      <DependentUpon>_S_BaoGiaDataSetDMTK.xsd</DependentUpon>
+    </None>
+    <None Include="_S_BaoGiaDataSetDVT.xsc">
+      <DependentUpon>_S_BaoGiaDataSetDVT.xsd</DependentUpon>
+    </None>
+    <None Include="_S_BaoGiaDataSetDVT.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_S_BaoGiaDataSetDVT.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_S_BaoGiaDataSetDVT.xss">
+      <DependentUpon>_S_BaoGiaDataSetDVT.xsd</DependentUpon>
+    </None>
+    <None Include="_S_BaoGiaDataSetHH.xsc">
+      <DependentUpon>_S_BaoGiaDataSetHH.xsd</DependentUpon>
+    </None>
+    <None Include="_S_BaoGiaDataSetHH.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_S_BaoGiaDataSetHH.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_S_BaoGiaDataSetHH.xss">
+      <DependentUpon>_S_BaoGiaDataSetHH.xsd</DependentUpon>
+    </None>
+    <None Include="_S_BaoGiaDataSetKH.xsc">
+      <DependentUpon>_S_BaoGiaDataSetKH.xsd</DependentUpon>
+    </None>
+    <None Include="_S_BaoGiaDataSetKH.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_S_BaoGiaDataSetKH.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_S_BaoGiaDataSetKH.xss">
+      <DependentUpon>_S_BaoGiaDataSetKH.xsd</DependentUpon>
+    </None>
+    <None Include="_S_BaoGiaDataSetKHO.xsc">
+      <DependentUpon>_S_BaoGiaDataSetKHO.xsd</DependentUpon>
+    </None>
+    <None Include="_S_BaoGiaDataSetKHO.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_S_BaoGiaDataSetKHO.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_S_BaoGiaDataSetKHO.xss">
+      <DependentUpon>_S_BaoGiaDataSetKHO.xsd</DependentUpon>
+    </None>
+    <None Include="_S_BaoGiaDataSetKHOthem.xsc">
+      <DependentUpon>_S_BaoGiaDataSetKHOthem.xsd</DependentUpon>
+    </None>
+    <None Include="_S_BaoGiaDataSetKHOthem.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_S_BaoGiaDataSetKHOthem.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_S_BaoGiaDataSetKHOthem.xss">
+      <DependentUpon>_S_BaoGiaDataSetKHOthem.xsd</DependentUpon>
+    </None>
+    <None Include="_S_BaoGiaDataSetNV.xsc">
+      <DependentUpon>_S_BaoGiaDataSetNV.xsd</DependentUpon>
+    </None>
+    <None Include="_S_BaoGiaDataSetNV.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_S_BaoGiaDataSetNV.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_S_BaoGiaDataSetNV.xss">
+      <DependentUpon>_S_BaoGiaDataSetNV.xsd</DependentUpon>
+    </None>
+    <None Include="_S_BaoGiaDataSetSDDK.xsc">
+      <DependentUpon>_S_BaoGiaDataSetSDDK.xsd</DependentUpon>
+    </None>
+    <None Include="_S_BaoGiaDataSetSDDK.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_S_BaoGiaDataSetSDDK.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_S_BaoGiaDataSetSDDK.xss">
+      <DependentUpon>_S_BaoGiaDataSetSDDK.xsd</DependentUpon>
+    </None>
+    <None Include="_S_BaoGiaDataSetSuaBG.xsc">
+      <DependentUpon>_S_BaoGiaDataSetSuaBG.xsd</DependentUpon>
+    </None>
+    <None Include="_S_BaoGiaDataSetSuaBG.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_S_BaoGiaDataSetSuaBG.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_S_BaoGiaDataSetSuaBG.xss">
+      <DependentUpon>_S_BaoGiaDataSetSuaBG.xsd</DependentUpon>
+    </None>
+    <None Include="_S_BaoGiaDataSetSuactBG.xsc">
+      <DependentUpon>_S_BaoGiaDataSetSuactBG.xsd</DependentUpon>
+    </None>
+    <None Include="_S_BaoGiaDataSetSuactBG.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_S_BaoGiaDataSetSuactBG.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_S_BaoGiaDataSetSuactBG.xss">
+      <DependentUpon>_S_BaoGiaDataSetSuactBG.xsd</DependentUpon>
+    </None>
+    <None Include="_S_BaoGiaDataSetSuaMH.xsc">
+      <DependentUpon>_S_BaoGiaDataSetSuaMH.xsd</DependentUpon>
+    </None>
+    <None Include="_S_BaoGiaDataSetSuaMH.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_S_BaoGiaDataSetSuaMH.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_S_BaoGiaDataSetSuaMH.xss">
+      <DependentUpon>_S_BaoGiaDataSetSuaMH.xsd</DependentUpon>
+    </None>
+    <None Include="_S_BaoGiaDataSetThem.xsc">
+      <DependentUpon>_S_BaoGiaDataSetThem.xsd</DependentUpon>
+    </None>
+    <None Include="_S_BaoGiaDataSetThem.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_S_BaoGiaDataSetThem.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_S_BaoGiaDataSetThem.xss">
+      <DependentUpon>_S_BaoGiaDataSetThem.xsd</DependentUpon>
+    </None>
+    <None Include="_S_BaoGiaDataSetXEMbg.xsc">
+      <DependentUpon>_S_BaoGiaDataSetXEMbg.xsd</DependentUpon>
+    </None>
+    <None Include="_S_BaoGiaDataSetXEMbg.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_S_BaoGiaDataSetXEMbg.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_S_BaoGiaDataSetXEMbg.xss">
+      <DependentUpon>_S_BaoGiaDataSetXEMbg.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Picture\writing.png" />
+    <None Include="Picture\contact-book.png" />
+    <None Include="Picture\checklist.png" />
+    <None Include="Picture\add-file.png" />
+    <Content Include="Picture\d3a8f29039dafe84a7cb.jpg" />
+    <None Include="Picture\delete.png" />
+    <None Include="Picture\document.png" />
+    <Content Include="Picture\eye_slash_visible_hide_hidden_show_icon_145987.png" />
+    <Content Include="Picture\eye_visible_hide_hidden_show_icon_145988.png" />
+    <None Include="Picture\goods.png" />
+    <Content Include="Picture\icons8-refresh-48.png" />
+    <Content Include="Picture\internet_lock_locked_padlock_password_secure_security_icon_127100 %281%29.png" />
+    <Content Include="Picture\people_avatar_man_account_person_profile_user_icon_221273.ico" />
+    <None Include="Picture\printer.png" />
+    <None Include="Picture\sheet.png" />
+    <None Include="Picture\search.png" />
+    <Content Include="Picture\vcsconflicting_93497.png" />
+    <None Include="Picture\people_avatar_man_account_person_profile_user_icon_221273.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

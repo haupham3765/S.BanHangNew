@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="_S_BaoGiaDataSetBCPS" targetNamespace="http://tempuri.org/_S_BaoGiaDataSetBCPS.xsd" xmlns:mstns="http://tempuri.org/_S_BaoGiaDataSetBCPS.xsd" xmlns="http://tempuri.org/_S_BaoGiaDataSetBCPS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="S_BaoGiaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="S_BaoGiaConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.S.BanHang.Properties.Settings.GlobalReference.Default.S_BaoGiaConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ViewBCPSTableAdapter" GeneratorDataComponentClassName="ViewBCPSTableAdapter" Name="ViewBCPS" UserDataComponentName="ViewBCPSTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="S_BaoGiaConnectionString (Settings)" DbObjectName="[S.BaoGia].dbo.ViewBCPS" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        sotk, sodudk, soduck
+FROM            ViewBCPS</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="sotk" DataSetColumn="sotk" />
+              <Mapping SourceColumn="sodudk" DataSetColumn="sodudk" />
+              <Mapping SourceColumn="soduck" DataSetColumn="soduck" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="_S_BaoGiaDataSetBCPS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="_S_BaoGiaDataSetBCPS" msprop:Generator_UserDSName="_S_BaoGiaDataSetBCPS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ViewBCPS" msprop:Generator_TableClassName="ViewBCPSDataTable" msprop:Generator_TableVarName="tableViewBCPS" msprop:Generator_RowChangedName="ViewBCPSRowChanged" msprop:Generator_TablePropName="ViewBCPS" msprop:Generator_RowDeletingName="ViewBCPSRowDeleting" msprop:Generator_RowChangingName="ViewBCPSRowChanging" msprop:Generator_RowEvHandlerName="ViewBCPSRowChangeEventHandler" msprop:Generator_RowDeletedName="ViewBCPSRowDeleted" msprop:Generator_RowClassName="ViewBCPSRow" msprop:Generator_UserTableName="ViewBCPS" msprop:Generator_RowEvArgName="ViewBCPSRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sotk" msprop:Generator_ColumnVarNameInTable="columnsotk" msprop:Generator_ColumnPropNameInRow="sotk" msprop:Generator_ColumnPropNameInTable="sotkColumn" msprop:Generator_UserColumnName="sotk">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sodudk" msprop:Generator_ColumnVarNameInTable="columnsodudk" msprop:Generator_ColumnPropNameInRow="sodudk" msprop:Generator_ColumnPropNameInTable="sodudkColumn" msprop:Generator_UserColumnName="sodudk" type="xs:double" minOccurs="0" />
+              <xs:element name="soduck" msprop:Generator_ColumnVarNameInTable="columnsoduck" msprop:Generator_ColumnPropNameInRow="soduck" msprop:Generator_ColumnPropNameInTable="soduckColumn" msprop:Generator_UserColumnName="soduck" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ViewBCPS" />
+      <xs:field xpath="mstns:sotk" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
